@@ -7,13 +7,8 @@ import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacu
   declarations: [],
   imports: [
   ],
-  providers: [provideConfig(layoutConfig), provideConfig(mediaConfig), ...defaultCmsContentProviders, provideConfig(<OccConfig>{
-    backend: {
-      occ: {
-        baseUrl: 'https://40.76.109.9:9002',
-      }
-    },
-  }), provideConfig(<SiteContextConfig>{
+  providers: [provideConfig(layoutConfig), provideConfig(mediaConfig), ...defaultCmsContentProviders,
+  provideConfig(<SiteContextConfig>{
     context: {
       currency: ['USD'],
       language: ['en'],
